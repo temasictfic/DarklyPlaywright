@@ -53,27 +53,6 @@ This solution currently automates the following vulnerabilities:
 13. **Header Manipulation** - Bypassing controls using HTTP headers
 14. **Scraping Hidden Path** - Finding hidden flags through recursive scraping
 
-## Project Structure
-
-```
-darkly/
-├── package.json                # Node.js dependencies
-├── playwright.config.js        # Playwright configuration
-├── README.md                   # This file
-├── run-tests.sh                # Command-line test runner
-├── server.js                   # Web interface server
-├── reports/                    # Generated screenshots
-│   ├── hidden-input/           # Screenshots for each test
-│   ├── parameter-tampering/
-│   └── ...
-├── tests/                      # Playwright test scripts
-│   ├── hidden-input.spec.js
-│   ├── parameter-tampering.spec.js
-│   └── ...
-└── views/                      # Web interface templates
-    └── index.ejs
-```
-
 ## Test Details
 
 ### 1. Hidden Input Vulnerability
