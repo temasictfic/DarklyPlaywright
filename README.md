@@ -23,7 +23,7 @@ The Darkly project is designed to introduce you to the world of web application 
 
 1. Clone this repository to your local machine.
 
-2. Install Playwright extension [text](https://playwright.dev/docs/getting-started-vscode)
+2. Install Playwright extension [extension](https://playwright.dev/docs/getting-started-vscode)
 
 5. Select and run any of the vulnerability tests from the extension.
 
