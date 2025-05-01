@@ -1,0 +1,16 @@
+{
+    "name": "darkly-automation",
+    "version": "1.0.0",
+    "description": "Playwright automation for Darkly security testing",
+    "main": "server.js",
+    "scripts": {
+      "test": "playwright test",
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "@playwright/test": "1.52.0",
+      "crypto-js": "4.2.0",
+      "ejs": "3.1.10",
+      "express": "5.1.0"
+    }
+  }

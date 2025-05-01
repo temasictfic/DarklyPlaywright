@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darkly Security Testing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+    .test-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .test-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .test-description {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    form {
+      display: inline-block;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Darkly Security Testing Dashboard</h1>
+  
+  <div class="tests-container">
+    <% tests.forEach(test => { %>
+      <div class="test-card">
+        <div class="test-title"><%= test.name %></div>
+        <div class="test-description"><%= test.description %></div>
+        <form action="/run-test" method="POST">
+          <input type="hidden" name="testId" value="<%= test.id %>">
+          <button type="submit">Run Test</button>
+        </form>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
